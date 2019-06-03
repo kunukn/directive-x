@@ -1,24 +1,25 @@
 let fs = require('fs'),
-		{ transform } = require('@babel/core')
+  { transform } = require('@babel/core');
 
 let fileNameArg = process.argv[2], // get from cmd args
-	fileName = fileNameArg.includes('.js') ? fileNameArg : fileNameArg + '.js'
+  fileName = fileNameArg.includes('.js') ? fileNameArg : fileNameArg + '.js';
+
+console.log(fileNameArg);
 
 // read the code from this file
 fs.readFile(fileName, function(err, data) {
-	if(err) throw err
+  if (err) throw err;
 
-	// convert from a buffer to a string
-	let src = data.toString()
+  // convert from a buffer to a string
+  let src = data.toString();
 
-	// use our plugin to transform the source
-	let { code } = transform(src, {
-		plugins: [require('../src/index')]
-	})
+  // use our plugin to transform the source
+  let { code } = transform(src, {
+    plugins: [require('../src/index')],
+  });
 
-	console.log(code)
-})
-
+  console.log(code);
+});
 
 // http.createServer((req, res) => {
 // 	res.writeHead(200, { 'Content-Type': 'text/html' })

@@ -24,10 +24,15 @@
   },
   "homepage": "https://github.com/kunukn/directive-x#readme",
   "dependencies": {
-    "@babel/core": "^7.4.5",
     "@babel/plugin-syntax-jsx": "^7.2.0"
   },
   "devDependencies": {
-    "jest": "^24.8.0"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
