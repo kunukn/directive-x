@@ -1,1 +1,3 @@
-<Text xIf={loggedIn} style={styles.title}>{username}</Text>
+<Text xIf={loggedIn} style={styles.title}>
+  {username}
+</Text>;

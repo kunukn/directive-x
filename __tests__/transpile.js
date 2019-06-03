@@ -1,5 +1,5 @@
 let fs = require('fs'),
-		{ transform } = require('babel-core')
+		{ transform } = require('@babel/core')
 
 let fileNameArg = process.argv[2], // get from cmd args
 	fileName = fileNameArg.includes('.js') ? fileNameArg : fileNameArg + '.js'

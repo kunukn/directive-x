@@ -1,13 +1,17 @@
 class Button extends Component {
-  handleClick(e) {/*...*/}
+  handleClick(e) {
+    /*...*/
+  }
 
-  handleHover(e) {/*...*/}
-  
+  handleHover(e) {
+    /*...*/
+  }
+
   render() {
-    return(
-      <View xBind onClick={(e) => this.handleClick(e)}>
+    return (
+      <View xBind onClick={e => this.handleClick(e)}>
         <Text xBind={SomeComp} onHover={this.handleHover} children="Click me" />
       </View>
-    )
+    );
   }
 }
